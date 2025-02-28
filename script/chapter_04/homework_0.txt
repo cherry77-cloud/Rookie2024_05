@@ -1,0 +1,10 @@
+配置服务器别名
+在~/.ssh目录下创建文件: config
+
+内容:
+Host myserver
+    HostName 123.57.47.211
+    User acs_0
+配置密钥登录
+ssh-keygen
+ssh-copy-id myserver
