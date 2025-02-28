@@ -1,0 +1,5 @@
+在myserver端
+cd homework/lesson_4
+mkdir homework_2
+在本地
+scp -r dir/  myserver:homework/lesson_4/homework_2
