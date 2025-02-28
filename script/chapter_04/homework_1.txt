@@ -1,0 +1,6 @@
+在myserver端
+mkdir ~/homework/lesson_4/homework_1/ -p
+在本地
+scp main.cpp myserver:homework/lesson_4/homework_1
+mkdir dir
+scp myserver:/etc/lsb-release dir
