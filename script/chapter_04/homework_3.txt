@@ -1,0 +1,3 @@
+在本地
+mkdir dir
+scp -r myserver:/var/lib/locales/supported.d dir
