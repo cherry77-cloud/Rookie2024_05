@@ -1,0 +1,47 @@
+# --------------------------------------------------------------------------------
+1. 查看当前目录子目录的大小    du -h --max-depth=1 .
+2. 统计当前目录下所有python文件的总行数    find . -name '*.py' | xargs cat | wc -l
+3. 获取当前系统设置的最大进程号（PID）值    cat /proc/sys/kernel/pid_max
+# --------------------------------------------------------------------------------
+
+  
+# --------------------------------------------------------------------------------
+# 总核数 = 物理CPU个数 * 每颗物理CPU的核数
+# 总逻辑CPU数 = 物理CPU个数 * 每颗物理CPU的核数 * 超线程数
+1. 查看物理CPU个数    cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
+2. 查看每个物理CPU中core的个数(即核数)   cat /proc/cpuinfo| grep "cpu cores"| uniq
+3. 查看逻辑CPU的个数    cat /proc/cpuinfo| grep "processor"| wc -l
+# --------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------
+python -m pip install --upgrade pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+
+conda search tensorflow -c anaconda -c free
+conda install tensorflow=2.15.0=cuda120py310h9360858_3 -y
+
+nano ~/.condarc
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+ssl_verify: true
+
+ssh -L8888:127.0.0.1:8888 user@host
+source ~/anaconda3/bin/activate
+# --------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------
+1. 虚拟环境的创建    conda create -n env_name python=3.9
+2. 虚拟环境的激活    conda activate env_name
+3. 虚拟环境的关闭    conda deactivate
+4. 虚拟环境的删除(base环境下)  conda remove -n env_name --all 或 conda env remove -n env_name
+5. 虚拟环境的查询     conda env list 或 conda info -e
+6. 安装 ipykernel    conda install -c anaconda ipykernel
+7. 查看jupyter notebook 中已经写入kernel的虚拟环境    jupyter kernelspec list
+8. 删除jupyter notebook 中的kernel     jupyter kernelspec remove kernel_name(kernel名称)
+9. 将虚拟环境加入到jupyter的kernel中    python -m ipykernel install --user --name=kernel_name
+# --------------------------------------------------------------------------------
