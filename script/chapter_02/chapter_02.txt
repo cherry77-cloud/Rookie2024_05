@@ -1,0 +1,103 @@
+# ---- Homework 0 ----
+cd homework_0
+vim names.txt
+输入 i 进入编辑模式  依次输入各个单词  按ESC返回一般命令模式
+按 :wq 保存并退出
+# ---- Homework 0 ----
+
+# ---- Homework 1 ----
+cd homework_1
+vim problem.txt
+[1] 最后一行第101个字符：G101<Space>i<Backspace>ESC
+[2] 第3行第8个字符：3G8<Space>i<Backspace>ESC
+[3] 第1行第30个字符：gg30<Space>i<Backspace>ESC
+[4] 第16行第55个字符：:16<Enter>55<Space>i<Backspace>ESC
+[5] 第9行第80个字符：9G80<Space>i<Backspace>ESC
+保存：:wq<Enter>
+# ---- Homework 1 ----
+
+# ---- Homework 2 ----
+cd homework_2
+vim problem.txt
+输入/two依次查找每个two
+[1] 在第1个"two"的后面添加"abc"  按i进入编辑模式添加即可
+[2] 在第2个"two"的前面添加"def"  按i进入编辑模式添加即可
+[3] 将第3个"two"后面的连续12个字符删掉  按i进入编辑模式，然后直接删即可
+[4] 将第4个"two"所在的行删掉  输入dd即可
+:wq 保存并退出
+# ---- Homework 2 ----
+
+# ---- Homework 3 ----
+cd homework_3
+vim problem.txt
+[1] 将第5行至第15行中所有of替换成OF。  :5,15s/of/OF/g
+[2] 将全文中所有的the替换成THE。  :1,$s/the/THE/g
+[3] 将第偶数个is替换成IS，第奇数个is不变。下标从1开始。  :1,$s/is/IS/gc  然后ny交替按即可
+:wq 保存并退出
+# ---- Homework 3 ----
+
+# ---- Homework 4 ----
+cd homework_4
+vim problem.txt
+[1] 删除第11行  11Gdd
+[2] 将所删除的行粘贴到文件最后一行的下一行  Gp
+[3] 复制第5行  5Gyy
+[4] 将所复制的行粘贴到文件当前最后一行的下行  Gp
+:wq 保存并退出
+# ---- Homework 4 ----
+
+# ---- Homework 5 ----
+cd homework_5
+vim problem.txt
+[1] 删除第11行第15个字符（包含该字符）至第13行第5个字符（包含该字符）  11G14<Space>v13G5<Space>d
+[2] 将所删除的内容粘贴到文件末尾（注意不要另起一行）  G$p
+[3] 复制第5行第88个个字符（包含该字符）至第7行第6个字符（包含该字符）  5G87<Space>v7G6<Space>y
+[4] 将所复制的内容粘贴到当前文件末尾（注意不要另起一行） G$p
+:wq 保存并退出
+# ---- Homework 5 ----
+
+# ---- Homework 6 ----
+cd homework_6
+vim source0.cpp
+ggdG  # 删掉全文
+Ctrl-a, "   在tmux中打开一个新的pane
+vim source1.cpp
+:set nonu  删掉行号
+shift + 选中前3行
+Ctrl + insert 复制选中内容
+选择source0.cpp所在的pane
+:set paste 进入粘贴模式
+i进入编辑模式
+Shift + insert粘贴内容
+
+同理操作source1.cpp的第12-24行
+保存source0.cpp  :wq
+退出source1.cpp  :q
+# ---- Homework 6 ----
+
+# ---- Homework 7 ----
+cd homework_7
+vim source.cpp
+gg=G  全文格式化
+:wq  保存并退出
+# ---- Homework 7 ----
+
+# ---- Homework 8 ----
+cd homework_8
+vim source.cpp
+选中15-21行   15Gv21G
+向右缩进一次   >
+同理再缩进一次
+
+选中22-23行   22Gv23G
+向左缩进一次   <
+:wq   保存并退出
+# ---- Homework 8 ----
+
+# ---- Homework 9 ----
+cd homework/lesson_2 <Enter>
+vim homework_9/source.cpp <Enter>
+i <Shift + Insert>
+<Esc> gg =G
+:wq <Enter>
+# ---- Homework 9 ----
